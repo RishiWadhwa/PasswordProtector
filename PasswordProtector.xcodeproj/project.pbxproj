@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B87318F26882D1000A75A3F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B87318E26882D1000A75A3F /* README.md */; };
 		5BE3AC9726857F4800F9CE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */; };
 		5BE3AC9926857F4800F9CE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9826857F4800F9CE22 /* SceneDelegate.swift */; };
 		5BE3AC9B26857F4800F9CE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9A26857F4800F9CE22 /* ViewController.swift */; };
@@ -16,6 +17,24 @@
 		5BE3ACA626857F4900F9CE22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE3ACA426857F4900F9CE22 /* LaunchScreen.storyboard */; };
 		5BE3ACB126857F4A00F9CE22 /* PasswordProtectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACB026857F4A00F9CE22 /* PasswordProtectorTests.swift */; };
 		5BE3ACBC26857F4A00F9CE22 /* PasswordProtectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACBB26857F4A00F9CE22 /* PasswordProtectorUITests.swift */; };
+		5BE3ACD22685811400F9CE22 /* TabbedPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACD12685811400F9CE22 /* TabbedPane.swift */; };
+		5BE3ACD4268581FF00F9CE22 /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACD3268581FF00F9CE22 /* PasswordGenerator.swift */; };
+		5BE3ACD6268587E100F9CE22 /* GeneratePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACD5268587E100F9CE22 /* GeneratePassword.swift */; };
+		5BE3ACD926863EDC00F9CE22 /* CoreDataSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACD826863EDC00F9CE22 /* CoreDataSaving.swift */; };
+		5BE3ACDB2686415A00F9CE22 /* CoreDataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACDA2686415A00F9CE22 /* CoreDataFetching.swift */; };
+		5BE3ACDD2686458B00F9CE22 /* PasswordLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACDC2686458B00F9CE22 /* PasswordLoader.swift */; };
+		5BE3ACE426864BE200F9CE22 /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACE226864BE200F9CE22 /* PasswordTableViewCell.swift */; };
+		5BE3ACE526864BE200F9CE22 /* PasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE3ACE326864BE200F9CE22 /* PasswordTableViewCell.xib */; };
+		5BE3ACE726865F2300F9CE22 /* CoreDataDeleting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACE626865F2300F9CE22 /* CoreDataDeleting.swift */; };
+		5BE3ACE9268668A700F9CE22 /* PasswordEncrypterDecrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACE8268668A700F9CE22 /* PasswordEncrypterDecrypter.swift */; };
+		5BE3ACED26869B4200F9CE22 /* SubstitutionEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACEC26869B4200F9CE22 /* SubstitutionEncryption.swift */; };
+		5BE3ACEF2686A0C400F9CE22 /* SubEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACEE2686A0C400F9CE22 /* SubEncryption.swift */; };
+		5BE3ACF12686B15300F9CE22 /* CaesarEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACF02686B15300F9CE22 /* CaesarEncryption.swift */; };
+		5BE3ACF32687A25300F9CE22 /* CaesEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACF22687A25300F9CE22 /* CaesEncryption.swift */; };
+		5BE3ACF72687D28700F9CE22 /* CaesarDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACF62687D28700F9CE22 /* CaesarDecryption.swift */; };
+		5BE3ACF92687D42400F9CE22 /* CaesDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACF82687D42400F9CE22 /* CaesDecryption.swift */; };
+		5BE3ACFB2687D5FF00F9CE22 /* SubsDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACFA2687D5FF00F9CE22 /* SubsDecryption.swift */; };
+		5BE3ACFD2687D73000F9CE22 /* SubstitutionDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACFC2687D73000F9CE22 /* SubstitutionDecryption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B87318E26882D1000A75A3F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5BE3AC9326857F4800F9CE22 /* PasswordProtector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordProtector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE3AC9826857F4800F9CE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +71,24 @@
 		5BE3ACB726857F4A00F9CE22 /* PasswordProtectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordProtectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE3ACBB26857F4A00F9CE22 /* PasswordProtectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordProtectorUITests.swift; sourceTree = "<group>"; };
 		5BE3ACBD26857F4A00F9CE22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE3ACD12685811400F9CE22 /* TabbedPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedPane.swift; sourceTree = "<group>"; };
+		5BE3ACD3268581FF00F9CE22 /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
+		5BE3ACD5268587E100F9CE22 /* GeneratePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePassword.swift; sourceTree = "<group>"; };
+		5BE3ACD826863EDC00F9CE22 /* CoreDataSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSaving.swift; sourceTree = "<group>"; };
+		5BE3ACDA2686415A00F9CE22 /* CoreDataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetching.swift; sourceTree = "<group>"; };
+		5BE3ACDC2686458B00F9CE22 /* PasswordLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoader.swift; sourceTree = "<group>"; };
+		5BE3ACE226864BE200F9CE22 /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
+		5BE3ACE326864BE200F9CE22 /* PasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTableViewCell.xib; sourceTree = "<group>"; };
+		5BE3ACE626865F2300F9CE22 /* CoreDataDeleting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeleting.swift; sourceTree = "<group>"; };
+		5BE3ACE8268668A700F9CE22 /* PasswordEncrypterDecrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEncrypterDecrypter.swift; sourceTree = "<group>"; };
+		5BE3ACEC26869B4200F9CE22 /* SubstitutionEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstitutionEncryption.swift; sourceTree = "<group>"; };
+		5BE3ACEE2686A0C400F9CE22 /* SubEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubEncryption.swift; sourceTree = "<group>"; };
+		5BE3ACF02686B15300F9CE22 /* CaesarEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesarEncryption.swift; sourceTree = "<group>"; };
+		5BE3ACF22687A25300F9CE22 /* CaesEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesEncryption.swift; sourceTree = "<group>"; };
+		5BE3ACF62687D28700F9CE22 /* CaesarDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesarDecryption.swift; sourceTree = "<group>"; };
+		5BE3ACF82687D42400F9CE22 /* CaesDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesDecryption.swift; sourceTree = "<group>"; };
+		5BE3ACFA2687D5FF00F9CE22 /* SubsDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsDecryption.swift; sourceTree = "<group>"; };
+		5BE3ACFC2687D73000F9CE22 /* SubstitutionDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstitutionDecryption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +139,8 @@
 		5BE3AC9526857F4800F9CE22 /* PasswordProtector */ = {
 			isa = PBXGroup;
 			children = (
+				5BE3ACCF26857FBD00F9CE22 /* View Controllers */,
+				5BE3ACCA26857F8000F9CE22 /* Helpers */,
 				5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */,
 				5BE3AC9826857F4800F9CE22 /* SceneDelegate.swift */,
 				5BE3AC9A26857F4800F9CE22 /* ViewController.swift */,
@@ -109,6 +149,7 @@
 				5BE3ACA426857F4900F9CE22 /* LaunchScreen.storyboard */,
 				5BE3ACA726857F4900F9CE22 /* Info.plist */,
 				5BE3AC9F26857F4800F9CE22 /* PasswordProtector.xcdatamodeld */,
+				5B87318E26882D1000A75A3F /* README.md */,
 			);
 			path = PasswordProtector;
 			sourceTree = "<group>";
@@ -129,6 +170,94 @@
 				5BE3ACBD26857F4A00F9CE22 /* Info.plist */,
 			);
 			path = PasswordProtectorUITests;
+			sourceTree = "<group>";
+		};
+		5BE3ACCA26857F8000F9CE22 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACE126864B7A00F9CE22 /* Cells */,
+				5BE3ACD726863EC900F9CE22 /* Core Data */,
+				5BE3ACD02685810200F9CE22 /* View Helpers */,
+				5BE3ACCC26857F9400F9CE22 /* Encrypt + Decrypt Password */,
+				5BE3ACCB26857F8800F9CE22 /* Generate Password */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5BE3ACCB26857F8800F9CE22 /* Generate Password */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACD5268587E100F9CE22 /* GeneratePassword.swift */,
+			);
+			path = "Generate Password";
+			sourceTree = "<group>";
+		};
+		5BE3ACCC26857F9400F9CE22 /* Encrypt + Decrypt Password */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACEB26869B2B00F9CE22 /* Decrypt */,
+				5BE3ACEA26869B2300F9CE22 /* Encrypt */,
+			);
+			path = "Encrypt + Decrypt Password";
+			sourceTree = "<group>";
+		};
+		5BE3ACCF26857FBD00F9CE22 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACD3268581FF00F9CE22 /* PasswordGenerator.swift */,
+				5BE3ACDC2686458B00F9CE22 /* PasswordLoader.swift */,
+				5BE3ACE8268668A700F9CE22 /* PasswordEncrypterDecrypter.swift */,
+				5BE3ACEE2686A0C400F9CE22 /* SubEncryption.swift */,
+				5BE3ACF22687A25300F9CE22 /* CaesEncryption.swift */,
+				5BE3ACF82687D42400F9CE22 /* CaesDecryption.swift */,
+				5BE3ACFA2687D5FF00F9CE22 /* SubsDecryption.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5BE3ACD02685810200F9CE22 /* View Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACD12685811400F9CE22 /* TabbedPane.swift */,
+			);
+			path = "View Helpers";
+			sourceTree = "<group>";
+		};
+		5BE3ACD726863EC900F9CE22 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACD826863EDC00F9CE22 /* CoreDataSaving.swift */,
+				5BE3ACDA2686415A00F9CE22 /* CoreDataFetching.swift */,
+				5BE3ACE626865F2300F9CE22 /* CoreDataDeleting.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		5BE3ACE126864B7A00F9CE22 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACE226864BE200F9CE22 /* PasswordTableViewCell.swift */,
+				5BE3ACE326864BE200F9CE22 /* PasswordTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5BE3ACEA26869B2300F9CE22 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACEC26869B4200F9CE22 /* SubstitutionEncryption.swift */,
+				5BE3ACF02686B15300F9CE22 /* CaesarEncryption.swift */,
+			);
+			path = Encrypt;
+			sourceTree = "<group>";
+		};
+		5BE3ACEB26869B2B00F9CE22 /* Decrypt */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACF62687D28700F9CE22 /* CaesarDecryption.swift */,
+				5BE3ACFC2687D73000F9CE22 /* SubstitutionDecryption.swift */,
+			);
+			path = Decrypt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +363,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE3ACE526864BE200F9CE22 /* PasswordTableViewCell.xib in Resources */,
 				5BE3ACA626857F4900F9CE22 /* LaunchScreen.storyboard in Resources */,
+				5B87318F26882D1000A75A3F /* README.md in Resources */,
 				5BE3ACA326857F4900F9CE22 /* Assets.xcassets in Resources */,
 				5BE3AC9E26857F4800F9CE22 /* Main.storyboard in Resources */,
 			);
@@ -261,10 +392,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE3ACE426864BE200F9CE22 /* PasswordTableViewCell.swift in Sources */,
 				5BE3AC9B26857F4800F9CE22 /* ViewController.swift in Sources */,
 				5BE3AC9726857F4800F9CE22 /* AppDelegate.swift in Sources */,
+				5BE3ACEF2686A0C400F9CE22 /* SubEncryption.swift in Sources */,
+				5BE3ACD926863EDC00F9CE22 /* CoreDataSaving.swift in Sources */,
+				5BE3ACFB2687D5FF00F9CE22 /* SubsDecryption.swift in Sources */,
+				5BE3ACF92687D42400F9CE22 /* CaesDecryption.swift in Sources */,
+				5BE3ACED26869B4200F9CE22 /* SubstitutionEncryption.swift in Sources */,
+				5BE3ACF32687A25300F9CE22 /* CaesEncryption.swift in Sources */,
+				5BE3ACE9268668A700F9CE22 /* PasswordEncrypterDecrypter.swift in Sources */,
+				5BE3ACD4268581FF00F9CE22 /* PasswordGenerator.swift in Sources */,
+				5BE3ACFD2687D73000F9CE22 /* SubstitutionDecryption.swift in Sources */,
+				5BE3ACF72687D28700F9CE22 /* CaesarDecryption.swift in Sources */,
+				5BE3ACD22685811400F9CE22 /* TabbedPane.swift in Sources */,
+				5BE3ACDB2686415A00F9CE22 /* CoreDataFetching.swift in Sources */,
 				5BE3AC9926857F4800F9CE22 /* SceneDelegate.swift in Sources */,
+				5BE3ACF12686B15300F9CE22 /* CaesarEncryption.swift in Sources */,
 				5BE3ACA126857F4800F9CE22 /* PasswordProtector.xcdatamodeld in Sources */,
+				5BE3ACD6268587E100F9CE22 /* GeneratePassword.swift in Sources */,
+				5BE3ACDD2686458B00F9CE22 /* PasswordLoader.swift in Sources */,
+				5BE3ACE726865F2300F9CE22 /* CoreDataDeleting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
