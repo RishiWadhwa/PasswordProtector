@@ -796,7 +796,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ZH-2b-7rf">
-                                <rect key="frame" x="10" y="255.5" width="394" height="385"/>
+                                <rect key="frame" x="10" y="230.5" width="394" height="435"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEXT SHOULD ONLY BE LETTERS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyd-Ai-PBD">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="75"/>
@@ -905,6 +905,49 @@
                                             <constraint firstAttribute="bottom" secondItem="E46-e4-epW" secondAttribute="bottom" id="yHJ-dQ-lCw"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7X-do-UrP">
+                                        <rect key="frame" x="0.0" y="385" width="394" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0mw-fu-IXz">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-bj-B2O">
+                                                        <rect key="frame" x="0.0" y="-0.5" width="394" height="25.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Encryption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnJ-Qj-e2X">
+                                                        <rect key="frame" x="0.0" y="25" width="394" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="I6h-T5-veM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6d-WZ-Bre">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="savePasswordButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PoN-J4-akG"/>
+                                                    <action selector="shareEncryption:" destination="qly-IJ-JJo" eventType="touchUpInside" id="T3O-Ph-Bfr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="c6d-WZ-Bre" secondAttribute="trailing" id="468-i9-MuG"/>
+                                            <constraint firstItem="c6d-WZ-Bre" firstAttribute="leading" secondItem="w7X-do-UrP" secondAttribute="leading" id="IhB-ej-GlE"/>
+                                            <constraint firstItem="c6d-WZ-Bre" firstAttribute="top" secondItem="w7X-do-UrP" secondAttribute="top" id="RSN-g7-Gdm"/>
+                                            <constraint firstItem="0mw-fu-IXz" firstAttribute="leading" secondItem="w7X-do-UrP" secondAttribute="leading" id="U9D-U3-2vQ"/>
+                                            <constraint firstItem="0mw-fu-IXz" firstAttribute="top" secondItem="w7X-do-UrP" secondAttribute="top" id="VZA-UL-LJn"/>
+                                            <constraint firstAttribute="bottom" secondItem="c6d-WZ-Bre" secondAttribute="bottom" id="XgW-T8-osX"/>
+                                            <constraint firstAttribute="trailing" secondItem="0mw-fu-IXz" secondAttribute="trailing" id="jhQ-JR-mRm"/>
+                                            <constraint firstAttribute="bottom" secondItem="0mw-fu-IXz" secondAttribute="bottom" id="lfT-3Z-P3m"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -928,6 +971,7 @@
                         <outlet property="cipherView" destination="7Bd-Y8-Lev" id="hAL-Aq-uy3"/>
                         <outlet property="encryptButton" destination="MpU-Np-bty" id="CRm-et-Cma"/>
                         <outlet property="saveText" destination="y82-TB-non" id="OAX-my-FOf"/>
+                        <outlet property="shareText" destination="w7X-do-UrP" id="SER-Om-XkZ"/>
                         <outlet property="tabbedPane" destination="dhT-XQ-KXB" id="iOI-kX-A0g"/>
                         <outlet property="textView" destination="ij6-pf-L51" id="BiK-4Q-N5a"/>
                         <outlet property="textfield" destination="Yr9-VK-ltf" id="9Us-7l-aDh"/>
@@ -1059,8 +1103,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pO5-im-rQD">
-                                <rect key="frame" x="10" y="293" width="394" height="310"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pO5-im-rQD">
+                                <rect key="frame" x="10" y="258" width="394" height="380"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEXT SHOULD ONLY BE LETTERS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBZ-zs-mkC">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="75"/>
@@ -1072,7 +1116,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r9m-QP-lhb">
-                                        <rect key="frame" x="0.0" y="75" width="394" height="110"/>
+                                        <rect key="frame" x="0.0" y="80" width="394" height="110"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39Y-jt-Blx">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
@@ -1107,7 +1151,7 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="New Text:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Lr-Gi-QAB">
-                                        <rect key="frame" x="0.0" y="185" width="394" height="75"/>
+                                        <rect key="frame" x="0.0" y="195" width="394" height="75"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="ikz-G3-UNx"/>
@@ -1117,7 +1161,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTA-mM-MsI">
-                                        <rect key="frame" x="0.0" y="260" width="394" height="50"/>
+                                        <rect key="frame" x="0.0" y="275" width="394" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xpy-5d-UKg">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
@@ -1159,6 +1203,48 @@
                                             <constraint firstAttribute="bottom" secondItem="xpy-5d-UKg" secondAttribute="bottom" id="sfr-tV-NDi"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewI-zy-CRF">
+                                        <rect key="frame" x="0.0" y="330" width="394" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s7m-k7-WKt">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NBK-N3-4ue">
+                                                        <rect key="frame" x="0.0" y="-1" width="394" height="26"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Encryption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeZ-cv-BBG">
+                                                        <rect key="frame" x="0.0" y="25" width="394" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="aFo-gK-QlR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLB-dW-gad">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="shareEncryption:" destination="PJK-TY-j49" eventType="touchUpInside" id="Otq-MV-XHe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="tLB-dW-gad" secondAttribute="bottom" id="Ckl-Yo-Vgx"/>
+                                            <constraint firstItem="s7m-k7-WKt" firstAttribute="top" secondItem="ewI-zy-CRF" secondAttribute="top" id="FMN-SR-eHh"/>
+                                            <constraint firstItem="tLB-dW-gad" firstAttribute="top" secondItem="ewI-zy-CRF" secondAttribute="top" id="Ik6-Ia-G8q"/>
+                                            <constraint firstAttribute="trailing" secondItem="tLB-dW-gad" secondAttribute="trailing" id="NRf-vD-sVA"/>
+                                            <constraint firstAttribute="trailing" secondItem="s7m-k7-WKt" secondAttribute="trailing" id="Nim-A1-NEm"/>
+                                            <constraint firstAttribute="bottom" secondItem="s7m-k7-WKt" secondAttribute="bottom" id="OcF-EI-LgU"/>
+                                            <constraint firstItem="tLB-dW-gad" firstAttribute="leading" secondItem="ewI-zy-CRF" secondAttribute="leading" id="ROQ-TC-aXL"/>
+                                            <constraint firstItem="s7m-k7-WKt" firstAttribute="leading" secondItem="ewI-zy-CRF" secondAttribute="leading" id="Wrd-mt-kLb"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -1181,6 +1267,7 @@
                     <connections>
                         <outlet property="encryptButton" destination="9Me-Zn-9U8" id="LJ7-8A-cdK"/>
                         <outlet property="saveText" destination="UTA-mM-MsI" id="D8O-La-8in"/>
+                        <outlet property="shareText" destination="ewI-zy-CRF" id="GTp-xu-9Dy"/>
                         <outlet property="tabbar" destination="bc1-FG-KT8" id="f5h-8u-qPy"/>
                         <outlet property="textLabel" destination="3Lr-Gi-QAB" id="Lgh-ir-AOb"/>
                         <outlet property="textfield" destination="39Y-jt-Blx" id="Dra-XW-PE0"/>
@@ -1360,7 +1447,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="DecryptText:" destination="aAT-s6-oMY" eventType="touchUpInside" id="2I7-26-o4s"/>
-                                                    <action selector="encryptText:" destination="qly-IJ-JJo" eventType="touchUpInside" id="q5H-Nn-WEy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1573,7 +1659,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="decryptText:" destination="RaN-f1-Zo8" eventType="touchUpInside" id="NwE-g8-ZnS"/>
-                                                    <action selector="encryptText" destination="PJK-TY-j49" eventType="touchUpInside" id="7ws-tX-o4k"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1625,9 +1710,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Au-hV-Clp"/>
-        <segue reference="EgR-Xk-Nzs"/>
+        <segue reference="Ocj-35-5tn"/>
         <segue reference="FoE-d4-CTJ"/>
-        <segue reference="7PF-pZ-y9S"/>
+        <segue reference="zoj-eR-pmx"/>
         <segue reference="455-Ug-d9V"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1645,6 +1730,7 @@
         <image name="plus.rectangle.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <image name="rectangle.and.pencil.and.ellipsis.rtl" catalog="system" width="128" height="92"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="tray.and.arrow.down" catalog="system" width="128" height="109"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

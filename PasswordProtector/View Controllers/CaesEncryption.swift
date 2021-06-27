@@ -15,6 +15,7 @@ class CaesEncryption: UIViewController
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var textLabel: UITextView!
     @IBOutlet weak var saveText: UIView!
+    @IBOutlet weak var shareText: UIView!
     
     var password = ""
     var username = ""
@@ -28,6 +29,7 @@ class CaesEncryption: UIViewController
         textfield.addDoneCancelToolbar()
         textfield.styleTextField(textfield)
         TabbedPane.stylePane(tabbedView: saveText)
+        TabbedPane.stylePane(tabbedView: shareText)
     }
     
     @IBAction func encryptText()
@@ -58,5 +60,35 @@ class CaesEncryption: UIViewController
         alert.addAction(UIAlertAction(title: "Don't Save", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func shareEncryption(_ sender: Any)
+    {
+        let encryptionText = password
+        let firstActivityItem = "Encrypted text: \(encryptionText)\nUse Caesar Decryption!"
+        
+        let image: UIImage = UIImage(named: "PasswordShield")!
+        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem, image], applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.sourceView = sender as! UIButton
+        activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+        activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
+        activityViewController.activityItemsConfiguration = [
+            UIActivity.ActivityType.message
+        ] as? UIActivityItemsConfigurationReading
+        
+        
+        activityViewController.excludedActivityTypes = [
+            UIActivity.ActivityType.postToFlickr,
+            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToWeibo,
+            UIActivity.ActivityType.postToTwitter,
+            UIActivity.ActivityType.postToTencentWeibo,
+            UIActivity.ActivityType.postToFacebook
+        ]
+        
+        activityViewController.isModalInPresentation = true
+        self.present(activityViewController, animated: true, completion: nil)
+        
     }
 }

@@ -17,3 +17,7 @@
 > -  Has Caesar and Substitution Encryption and Decryption.
 > - Has Password Generator.
 > - Has ability to save Password locally on device (no server saving for security).
+
+### Version 1.1
+> - Added sharing capabilities
+> - Shares to anywhere you want other than famous video sharing and blogging (weibo, vimeo, etc) as well as social medias like Twitter FaceBook
