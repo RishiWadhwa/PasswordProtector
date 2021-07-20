@@ -16,6 +16,7 @@ class CaesEncryption: UIViewController
     @IBOutlet weak var textLabel: UITextView!
     @IBOutlet weak var saveText: UIView!
     @IBOutlet weak var shareText: UIView!
+    @IBOutlet weak var copyEnc: UIView!
     
     var password = ""
     var username = ""
@@ -30,6 +31,7 @@ class CaesEncryption: UIViewController
         textfield.styleTextField(textfield)
         TabbedPane.stylePane(tabbedView: saveText)
         TabbedPane.stylePane(tabbedView: shareText)
+        TabbedPane.stylePane(tabbedView: copyEnc)
     }
     
     @IBAction func encryptText()
@@ -40,24 +42,19 @@ class CaesEncryption: UIViewController
     
     @IBAction func savePassword(_ sender: Any)
     {
-        let alert = UIAlertController(title: "Save Password", message: "Type the username and the place that this password is for. (Leave the non-applicable ones blank)", preferredStyle: .alert)
+        location = "Caesar"
         
-        alert.addTextField { textfield in
-            textfield.placeholder = "Username associated with password"
+        let alert = UIAlertController(title: "Add Encryption", message: "Enter the information you want. Leave blank what isn't applicable.", preferredStyle: .alert)
+        alert.addTextField { field in
+            field.placeholder = "What this encryption is for..."
         }
         
-        alert.addTextField { textfield in
-            textfield.placeholder = "What is this password for"
-        }
-        
-        alert.addAction(UIAlertAction(title: "Save Password", style: .default, handler: { submitButton in
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
             self.username = alert.textFields![0].text!
-            self.location = alert.textFields![1].text!
             
             CoreDataSaving.save(self.password, self.username, self.location, self)
         }))
-        
-        alert.addAction(UIAlertAction(title: "Don't Save", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Don't Add", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -65,7 +62,7 @@ class CaesEncryption: UIViewController
     @IBAction func shareEncryption(_ sender: Any)
     {
         let encryptionText = password
-        let firstActivityItem = "Encrypted text: \(encryptionText)\nUse Caesar Decryption!"
+        let firstActivityItem = "\(encryptionText)"
         
         let image: UIImage = UIImage(named: "PasswordShield")!
         let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem, image], applicationActivities: nil)
@@ -90,5 +87,10 @@ class CaesEncryption: UIViewController
         activityViewController.isModalInPresentation = true
         self.present(activityViewController, animated: true, completion: nil)
         
+    }
+    
+    @IBAction func copyText(_ sender: Any)
+    {
+        Copy.copyText(password)
     }
 }

@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2A659A268A487800F25F8E /* QuickDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A6599268A487800F25F8E /* QuickDecryption.swift */; };
 		5B87318F26882D1000A75A3F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B87318E26882D1000A75A3F /* README.md */; };
+		5B8731942688EC0A00A75A3F /* CipherCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8731932688EC0A00A75A3F /* CipherCall.swift */; };
+		5B8731962688EC1400A75A3F /* CipherSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8731952688EC1400A75A3F /* CipherSend.swift */; };
+		5B8731982688F1B100A75A3F /* QuickEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8731972688F1B100A75A3F /* QuickEncrypt.swift */; };
+		5B87319A2688FE0900A75A3F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8731992688FE0900A75A3F /* Settings.swift */; };
+		5B87319D2689488C00A75A3F /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87319C2689488C00A75A3F /* Copy.swift */; };
+		5B8731A026896F4400A75A3F /* CipherChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87319F26896F4400A75A3F /* CipherChanger.swift */; };
 		5BE3AC9726857F4800F9CE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */; };
 		5BE3AC9926857F4800F9CE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9826857F4800F9CE22 /* SceneDelegate.swift */; };
 		5BE3AC9B26857F4800F9CE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9A26857F4800F9CE22 /* ViewController.swift */; };
@@ -35,6 +42,9 @@
 		5BE3ACF92687D42400F9CE22 /* CaesDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACF82687D42400F9CE22 /* CaesDecryption.swift */; };
 		5BE3ACFB2687D5FF00F9CE22 /* SubsDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACFA2687D5FF00F9CE22 /* SubsDecryption.swift */; };
 		5BE3ACFD2687D73000F9CE22 /* SubstitutionDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3ACFC2687D73000F9CE22 /* SubstitutionDecryption.swift */; };
+		5BE629F726A5D2A3005AD6E0 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE629F626A5D2A3005AD6E0 /* SwipeController.swift */; };
+		5BE629FA26A5EABC005AD6E0 /* TOSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE629F926A5EABC005AD6E0 /* TOSController.swift */; };
+		5BE629FC26A5F22B005AD6E0 /* OWEL_TOS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5BE629FB26A5F22B005AD6E0 /* OWEL_TOS.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +65,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B2A6599268A487800F25F8E /* QuickDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickDecryption.swift; sourceTree = "<group>"; };
 		5B87318E26882D1000A75A3F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5B8731932688EC0A00A75A3F /* CipherCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherCall.swift; sourceTree = "<group>"; };
+		5B8731952688EC1400A75A3F /* CipherSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherSend.swift; sourceTree = "<group>"; };
+		5B8731972688F1B100A75A3F /* QuickEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickEncrypt.swift; sourceTree = "<group>"; };
+		5B8731992688FE0900A75A3F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5B87319C2689488C00A75A3F /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
+		5B87319F26896F4400A75A3F /* CipherChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherChanger.swift; sourceTree = "<group>"; };
 		5BE3AC9326857F4800F9CE22 /* PasswordProtector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordProtector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE3AC9826857F4800F9CE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +106,10 @@
 		5BE3ACF82687D42400F9CE22 /* CaesDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesDecryption.swift; sourceTree = "<group>"; };
 		5BE3ACFA2687D5FF00F9CE22 /* SubsDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsDecryption.swift; sourceTree = "<group>"; };
 		5BE3ACFC2687D73000F9CE22 /* SubstitutionDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstitutionDecryption.swift; sourceTree = "<group>"; };
+		5BE629F626A5D2A3005AD6E0 /* SwipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeController.swift; sourceTree = "<group>"; };
+		5BE629F826A5D8F8005AD6E0 /* PasswordProtector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PasswordProtector.entitlements; sourceTree = "<group>"; };
+		5BE629F926A5EABC005AD6E0 /* TOSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOSController.swift; sourceTree = "<group>"; };
+		5BE629FB26A5F22B005AD6E0 /* OWEL_TOS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = OWEL_TOS.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +137,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B8731922688EBFE00A75A3F /* Cipher CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5B8731932688EC0A00A75A3F /* CipherCall.swift */,
+				5B8731952688EC1400A75A3F /* CipherSend.swift */,
+			);
+			path = "Cipher CoreData";
+			sourceTree = "<group>";
+		};
+		5B87319B2689487D00A75A3F /* Copy + Paste */ = {
+			isa = PBXGroup;
+			children = (
+				5B87319C2689488C00A75A3F /* Copy.swift */,
+			);
+			path = "Copy + Paste";
+			sourceTree = "<group>";
+		};
+		5B87319E26896F1E00A75A3F /* Cipher Changing */ = {
+			isa = PBXGroup;
+			children = (
+				5B87319F26896F4400A75A3F /* CipherChanger.swift */,
+			);
+			path = "Cipher Changing";
+			sourceTree = "<group>";
+		};
 		5BE3AC8A26857F4800F9CE22 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +185,8 @@
 		5BE3AC9526857F4800F9CE22 /* PasswordProtector */ = {
 			isa = PBXGroup;
 			children = (
+				5BE629F826A5D8F8005AD6E0 /* PasswordProtector.entitlements */,
+				5BE629FB26A5F22B005AD6E0 /* OWEL_TOS.pdf */,
 				5BE3ACCF26857FBD00F9CE22 /* View Controllers */,
 				5BE3ACCA26857F8000F9CE22 /* Helpers */,
 				5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */,
@@ -175,6 +223,9 @@
 		5BE3ACCA26857F8000F9CE22 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5B87319E26896F1E00A75A3F /* Cipher Changing */,
+				5B87319B2689487D00A75A3F /* Copy + Paste */,
+				5B8731922688EBFE00A75A3F /* Cipher CoreData */,
 				5BE3ACE126864B7A00F9CE22 /* Cells */,
 				5BE3ACD726863EC900F9CE22 /* Core Data */,
 				5BE3ACD02685810200F9CE22 /* View Helpers */,
@@ -211,6 +262,11 @@
 				5BE3ACF22687A25300F9CE22 /* CaesEncryption.swift */,
 				5BE3ACF82687D42400F9CE22 /* CaesDecryption.swift */,
 				5BE3ACFA2687D5FF00F9CE22 /* SubsDecryption.swift */,
+				5B8731972688F1B100A75A3F /* QuickEncrypt.swift */,
+				5B8731992688FE0900A75A3F /* Settings.swift */,
+				5B2A6599268A487800F25F8E /* QuickDecryption.swift */,
+				5BE629F626A5D2A3005AD6E0 /* SwipeController.swift */,
+				5BE629F926A5EABC005AD6E0 /* TOSController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -366,6 +422,7 @@
 				5BE3ACE526864BE200F9CE22 /* PasswordTableViewCell.xib in Resources */,
 				5BE3ACA626857F4900F9CE22 /* LaunchScreen.storyboard in Resources */,
 				5B87318F26882D1000A75A3F /* README.md in Resources */,
+				5BE629FC26A5F22B005AD6E0 /* OWEL_TOS.pdf in Resources */,
 				5BE3ACA326857F4900F9CE22 /* Assets.xcassets in Resources */,
 				5BE3AC9E26857F4800F9CE22 /* Main.storyboard in Resources */,
 			);
@@ -392,24 +449,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8731962688EC1400A75A3F /* CipherSend.swift in Sources */,
+				5BE629F726A5D2A3005AD6E0 /* SwipeController.swift in Sources */,
 				5BE3ACE426864BE200F9CE22 /* PasswordTableViewCell.swift in Sources */,
 				5BE3AC9B26857F4800F9CE22 /* ViewController.swift in Sources */,
 				5BE3AC9726857F4800F9CE22 /* AppDelegate.swift in Sources */,
 				5BE3ACEF2686A0C400F9CE22 /* SubEncryption.swift in Sources */,
+				5BE629FA26A5EABC005AD6E0 /* TOSController.swift in Sources */,
 				5BE3ACD926863EDC00F9CE22 /* CoreDataSaving.swift in Sources */,
 				5BE3ACFB2687D5FF00F9CE22 /* SubsDecryption.swift in Sources */,
 				5BE3ACF92687D42400F9CE22 /* CaesDecryption.swift in Sources */,
 				5BE3ACED26869B4200F9CE22 /* SubstitutionEncryption.swift in Sources */,
+				5B87319A2688FE0900A75A3F /* Settings.swift in Sources */,
+				5B2A659A268A487800F25F8E /* QuickDecryption.swift in Sources */,
 				5BE3ACF32687A25300F9CE22 /* CaesEncryption.swift in Sources */,
 				5BE3ACE9268668A700F9CE22 /* PasswordEncrypterDecrypter.swift in Sources */,
 				5BE3ACD4268581FF00F9CE22 /* PasswordGenerator.swift in Sources */,
 				5BE3ACFD2687D73000F9CE22 /* SubstitutionDecryption.swift in Sources */,
 				5BE3ACF72687D28700F9CE22 /* CaesarDecryption.swift in Sources */,
 				5BE3ACD22685811400F9CE22 /* TabbedPane.swift in Sources */,
+				5B8731A026896F4400A75A3F /* CipherChanger.swift in Sources */,
+				5B8731982688F1B100A75A3F /* QuickEncrypt.swift in Sources */,
 				5BE3ACDB2686415A00F9CE22 /* CoreDataFetching.swift in Sources */,
 				5BE3AC9926857F4800F9CE22 /* SceneDelegate.swift in Sources */,
 				5BE3ACF12686B15300F9CE22 /* CaesarEncryption.swift in Sources */,
+				5B87319D2689488C00A75A3F /* Copy.swift in Sources */,
 				5BE3ACA126857F4800F9CE22 /* PasswordProtector.xcdatamodeld in Sources */,
+				5B8731942688EC0A00A75A3F /* CipherCall.swift in Sources */,
 				5BE3ACD6268587E100F9CE22 /* GeneratePassword.swift in Sources */,
 				5BE3ACDD2686458B00F9CE22 /* PasswordLoader.swift in Sources */,
 				5BE3ACE726865F2300F9CE22 /* CoreDataDeleting.swift in Sources */,
@@ -518,7 +584,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -573,7 +639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -588,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PasswordProtector/PasswordProtector.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7B6A868M7K;
 				INFOPLIST_FILE = PasswordProtector/Info.plist;
@@ -595,7 +662,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RW.PasswordProtector;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RW.owel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -607,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PasswordProtector/PasswordProtector.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7B6A868M7K;
 				INFOPLIST_FILE = PasswordProtector/Info.plist;
@@ -614,7 +682,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RW.PasswordProtector;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RW.owel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -13,6 +13,8 @@ class PasswordEncrypterDecrypter: UIViewController
     @IBOutlet weak var tabbedPane: UIView!
     @IBOutlet weak var encryptButton: UIButton!
     @IBOutlet weak var decryptButton: UIButton!
+    @IBOutlet weak var quickencryptButton: UIButton!
+    @IBOutlet weak var quickdecryptButton: UIButton!
     
     override func viewDidLoad()
     {
@@ -22,6 +24,8 @@ class PasswordEncrypterDecrypter: UIViewController
         
         encryptButton.layer.cornerRadius = 25
         decryptButton.layer.cornerRadius = 25
+        quickencryptButton.layer.cornerRadius = 25
+        quickdecryptButton.layer.cornerRadius = 25
     }
     
     

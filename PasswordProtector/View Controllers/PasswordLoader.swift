@@ -39,22 +39,21 @@ class PasswordLoader: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func addPasswordButtonPressed(_ sender: Any)
     {
-        let alert = UIAlertController(title: "Add Password", message: "Enter the information required. Leave blank what isn't applicable.", preferredStyle: .alert)
+        location = ""
+        username = ""
+        password = ""
         
+        let alert = UIAlertController(title: "Add Encryption", message: "Enter the information you want. Leave blank what isn't applicable.", preferredStyle: .alert)
         alert.addTextField { field in
-            field.placeholder = "Location this Password is for"
+            field.placeholder = "What this encryption is for..."
         }
         alert.addTextField { field in
-            field.placeholder = "Username..."
-        }
-        alert.addTextField { field in
-            field.placeholder = "Password... "
+            field.placeholder = "Encryption... "
         }
         
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
-            self.location = alert.textFields![0].text!
-            self.username = alert.textFields![1].text!
-            self.password = alert.textFields![2].text!
+            self.username = alert.textFields![0].text!
+            self.password = alert.textFields![1].text!
             
             CoreDataSaving.save(self.password, self.username, self.location, self)
         }))
@@ -85,17 +84,10 @@ class PasswordLoader: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PasswordTableViewCell
         
         cipher = passwords[indexPath.row].value(forKey: "cipher") as? String ?? "N/A"
-        if cipher != ""
-        {
-            cell.locationLabel.text = "\(passwords[indexPath.row].value(forKey: "location") ?? "") (HAS CIPHER)"
-        }
-        else
-        {
-            cell.locationLabel.text = passwords[indexPath.row].value(forKey: "location") as? String
-        }
+        
+        cell.locationLabel.text = "\(passwords[indexPath.row].value(forKey: "location") as? String ?? "") Encryption"
         
         cell.passwordLabel.text = "Password: \(passwords[indexPath.row].value(forKey: "password") as? String ?? "")"
-        cell.usernameLabel.text = "Username: \(passwords[indexPath.row].value(forKey: "username") as? String ?? "")"
         
         cell.layer.borderColor = CGColor(red: 0, green: 51, blue: 103, alpha: 0.3)
         cell.layer.borderWidth = 2
@@ -118,7 +110,47 @@ class PasswordLoader: UIViewController, UITableViewDelegate, UITableViewDataSour
             cipher = "N/A"
         }
         
-        let alert = UIAlertController(title: "\(passwords[indexPath.row].value(forKey: "location") ?? "N/A") Password", message: "Username: \(passwords[indexPath.row].value(forKey: "username") ?? "N/A")\nPassword: \(passwords[indexPath.row].value(forKey: "password") ?? "N/A")\nCipher:\n\(cipher)", preferredStyle: .alert)
+        location = passwords[indexPath.row].value(forKey: "location") as? String ?? ""
+        password = passwords[indexPath.row].value(forKey: "password") as? String ?? "N/A"
+        
+        
+        
+        let alert = UIAlertController(title: "\(location) Encryption", message: "What this is for:\n\(passwords[indexPath.row].value(forKey: "username") ?? "N/A")\nEncryption: \(password)\nCipher:\n\(cipher)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Copy Password & Encryption", style: .default, handler: { alert in
+            Copy.copyText("\(self.location) Encryption\nPassword: \(self.password)\nEncryption: \(self.cipher)")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Share Password & Encryption", style: .default, handler: { alert in
+            
+            let encryptionText = self.password
+            let cipherText = self.cipher
+            let firstActivityItem = "Encrypted text: \(encryptionText)\nCipher: \(cipherText)\nUse Substitution Decryption!"
+            
+            let image: UIImage = UIImage(named: "PasswordShield")!
+            let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem, image], applicationActivities: nil)
+            
+            activityViewController.popoverPresentationController?.sourceView = self.addNewPassword
+            activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+            activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
+            activityViewController.activityItemsConfiguration = [
+                UIActivity.ActivityType.message
+            ] as? UIActivityItemsConfigurationReading
+            
+            
+            activityViewController.excludedActivityTypes = [
+                UIActivity.ActivityType.postToFlickr,
+                UIActivity.ActivityType.postToVimeo,
+                UIActivity.ActivityType.postToWeibo,
+                UIActivity.ActivityType.postToTwitter,
+                UIActivity.ActivityType.postToTencentWeibo,
+                UIActivity.ActivityType.postToFacebook
+            ]
+            
+            activityViewController.isModalInPresentation = true
+            self.present(activityViewController, animated: true, completion: nil)
+            
+        }))
         alert.addAction(UIAlertAction(title: "Got it!", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)

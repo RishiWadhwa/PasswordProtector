@@ -22,6 +22,8 @@ class PasswordGenerator: UIViewController
     var enableSpecialCharacters = false
     var passwordLength = 8
     
+    var password = ""
+    
     var userInputUsername = ""
     var userInputLocation = ""
     
@@ -32,30 +34,6 @@ class PasswordGenerator: UIViewController
         generatePassword.layer.cornerRadius = 25
         
         TabbedPane.stylePane(tabbedView: savePasswordView)
-    }
-    
-    @IBAction func savePasswordButtonClicked(_ sender: Any)
-    {
-        let alert = UIAlertController(title: "Save Password", message: "Type the username and the place that this password is for. (Leave the non-applicable ones blank)", preferredStyle: .alert)
-        
-        alert.addTextField { textfield in
-            textfield.placeholder = "Username associated with password"
-        }
-        
-        alert.addTextField { textfield in
-            textfield.placeholder = "What is this password for"
-        }
-        
-        alert.addAction(UIAlertAction(title: "Save Password", style: .default, handler: { submitButton in
-            self.userInputUsername = alert.textFields![0].text!
-            self.userInputLocation = alert.textFields![1].text!
-            
-            CoreDataSaving.save(self.passwordLabel.text!, self.userInputUsername, self.userInputLocation, self)
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Don't Save", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func enableOrDisableImage(_ sender: Any)
@@ -82,11 +60,13 @@ class PasswordGenerator: UIViewController
     {
         if enableSpecialCharacters
         {
-            passwordLabel.text = GeneratePassword.MakeSpecialPassword(passwordLength)
+            password = GeneratePassword.MakeSpecialPassword(passwordLength)
+            passwordLabel.text = password
         }
         else
         {
-            passwordLabel.text = GeneratePassword.MakePassword(passwordLength)
+            password = GeneratePassword.MakePassword(passwordLength)
+            passwordLabel.text = password
         }
     }
     
@@ -97,5 +77,10 @@ class PasswordGenerator: UIViewController
     @IBAction func highlightImage(_ sender: Any)
     {
         enableOrDisableImage(sender)
+    }
+    
+    @IBAction func copyText(_ sender: Any)
+    {
+        Copy.copyText(password)
     }
 }

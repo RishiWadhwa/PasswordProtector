@@ -10,7 +10,6 @@ import UIKit
 class PasswordTableViewCell: UITableViewCell
 {
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     
     override func awakeFromNib()
