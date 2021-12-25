@@ -38,6 +38,7 @@ class CaesEncryption: UIViewController
     {
         password = CaesarEncryption.generateEncryption(textfield.text!)
         textLabel.text = "New Text:\n\(password)"
+        textLabel.textColor = .black
     }
     
     @IBAction func savePassword(_ sender: Any)
@@ -91,6 +92,6 @@ class CaesEncryption: UIViewController
     
     @IBAction func copyText(_ sender: Any)
     {
-        Copy.copyText(password)
+        textfield.textColor = Copy.copyText(password)
     }
 }

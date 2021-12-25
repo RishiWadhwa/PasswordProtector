@@ -18,6 +18,8 @@ class PasswordGenerator: UIViewController
     @IBOutlet weak var passwordLengthLabel: UILabel!
     @IBOutlet weak var passwordLabel: UITextView!
     @IBOutlet weak var savePasswordView: UIView!
+    @IBOutlet weak var chainPasswordGenerator: UIButton!
+    @IBOutlet weak var copyPassword: UIButton!
     
     var enableSpecialCharacters = false
     var passwordLength = 8
@@ -32,8 +34,11 @@ class PasswordGenerator: UIViewController
         
         TabbedPane.stylePane(tabbedView: tabBar)
         generatePassword.layer.cornerRadius = 25
+        copyPassword.layer.cornerRadius = 25
         
         TabbedPane.stylePane(tabbedView: savePasswordView)
+        
+        chainPasswordGenerator.layer.cornerRadius = 25
     }
     
     @IBAction func enableOrDisableImage(_ sender: Any)
@@ -68,6 +73,8 @@ class PasswordGenerator: UIViewController
             password = GeneratePassword.MakePassword(passwordLength)
             passwordLabel.text = password
         }
+        
+        passwordLabel.textColor = .black
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -81,6 +88,6 @@ class PasswordGenerator: UIViewController
     
     @IBAction func copyText(_ sender: Any)
     {
-        Copy.copyText(password)
+        passwordLabel.textColor = Copy.copyText(password)
     }
 }

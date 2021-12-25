@@ -47,6 +47,9 @@ class SubEncryption: UIViewController
         
         textView.text = "New Text:\n\(array[0])"
         cipherView.text = "Cipher:\n\(array[1])"
+        
+        textView.textColor = .black
+        cipherView.textColor = .black
     }
     
     @IBAction func savePassword(_ sender: Any)
@@ -101,12 +104,12 @@ class SubEncryption: UIViewController
     
     @IBAction func copyEncryption(_ sender: Any)
     {
-        Copy.copyText(password)
+        cipherView.textColor = Copy.copyText(password)
     }
     
     @IBAction func copyCipher(_ sender: Any)
     {
-        Copy.copyText(cipher)
+        textView.textColor = Copy.copyText(cipher)
     }
 }
 

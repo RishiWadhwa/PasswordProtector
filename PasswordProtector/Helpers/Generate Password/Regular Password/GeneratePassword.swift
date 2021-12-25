@@ -34,6 +34,8 @@ class GeneratePassword
             password += randomCharacter()
         }
         
+        password = password.dropLast() + randomSpecialCharacter()
+        
         return password
     }
     
@@ -53,22 +55,22 @@ class GeneratePassword
     
     private static func randomCharacter() -> String
     {
-        let characterCount = characterArray.count*2
+        let characterCount = characterArray.count
         let numberCount = numberArray.count
         let specialCount = specialArray.count
         let totalCount = characterCount + numberCount + specialCount
         
-        var index = Int.random(in: 0..<totalCount)
+        let index = Int.random(in: 0..<totalCount)
         if index < characterCount
         {
-            if index < characterArray.count
+            let upperOrLower = Int.random(in: 0..<11)
+            if upperOrLower < 6 // uppercase
             {
-                return characterArray[index]
+                return characterArray[upperOrLower].uppercased()
             }
-            else
+            else // lowercase
             {
-                index -= characterArray.count
-                return characterArray[index].lowercased()
+                return characterArray[upperOrLower].lowercased()
             }
         }
         else if index < (numberCount + characterCount)
@@ -78,6 +80,22 @@ class GeneratePassword
         else
         {
             return specialArray[index - characterCount - numberCount]
+        }
+    }
+    
+    private static func randomSpecialCharacter() -> String {
+        let numberCount = numberArray.count
+        let specialCount = specialArray.count
+        let totalCount = numberCount + specialCount
+        
+        let index = Int.random(in: 0..<totalCount)
+        if index < numberCount
+        {
+            return numberArray[index]
+        }
+        else
+        {
+            return specialArray[index - numberCount]
         }
     }
 }

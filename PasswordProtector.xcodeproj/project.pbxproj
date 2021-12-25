@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B2A659A268A487800F25F8E /* QuickDecryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A6599268A487800F25F8E /* QuickDecryption.swift */; };
+		5B54B15E273ADAE40066B1CD /* ChainGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B15D273ADAE40066B1CD /* ChainGeneration.swift */; };
 		5B87318F26882D1000A75A3F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B87318E26882D1000A75A3F /* README.md */; };
 		5B8731942688EC0A00A75A3F /* CipherCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8731932688EC0A00A75A3F /* CipherCall.swift */; };
 		5B8731962688EC1400A75A3F /* CipherSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8731952688EC1400A75A3F /* CipherSend.swift */; };
@@ -15,6 +16,7 @@
 		5B87319A2688FE0900A75A3F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8731992688FE0900A75A3F /* Settings.swift */; };
 		5B87319D2689488C00A75A3F /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87319C2689488C00A75A3F /* Copy.swift */; };
 		5B8731A026896F4400A75A3F /* CipherChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87319F26896F4400A75A3F /* CipherChanger.swift */; };
+		5BA09FAC2739BBA2000F6D8F /* ChainPasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA09FAB2739BBA2000F6D8F /* ChainPasswordGenerator.swift */; };
 		5BE3AC9726857F4800F9CE22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */; };
 		5BE3AC9926857F4800F9CE22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9826857F4800F9CE22 /* SceneDelegate.swift */; };
 		5BE3AC9B26857F4800F9CE22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE3AC9A26857F4800F9CE22 /* ViewController.swift */; };
@@ -66,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		5B2A6599268A487800F25F8E /* QuickDecryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickDecryption.swift; sourceTree = "<group>"; };
+		5B54B15D273ADAE40066B1CD /* ChainGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainGeneration.swift; sourceTree = "<group>"; };
 		5B87318E26882D1000A75A3F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5B8731932688EC0A00A75A3F /* CipherCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherCall.swift; sourceTree = "<group>"; };
 		5B8731952688EC1400A75A3F /* CipherSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherSend.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		5B8731992688FE0900A75A3F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5B87319C2689488C00A75A3F /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
 		5B87319F26896F4400A75A3F /* CipherChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherChanger.swift; sourceTree = "<group>"; };
+		5BA09FAB2739BBA2000F6D8F /* ChainPasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainPasswordGenerator.swift; sourceTree = "<group>"; };
 		5BE3AC9326857F4800F9CE22 /* PasswordProtector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordProtector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE3AC9626857F4800F9CE22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE3AC9826857F4800F9CE22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B54B15B273ADACC0066B1CD /* Regular Password */ = {
+			isa = PBXGroup;
+			children = (
+				5BE3ACD5268587E100F9CE22 /* GeneratePassword.swift */,
+			);
+			path = "Regular Password";
+			sourceTree = "<group>";
+		};
+		5B54B15C273ADAD90066B1CD /* Chain Password */ = {
+			isa = PBXGroup;
+			children = (
+				5B54B15D273ADAE40066B1CD /* ChainGeneration.swift */,
+			);
+			path = "Chain Password";
+			sourceTree = "<group>";
+		};
 		5B8731922688EBFE00A75A3F /* Cipher CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +258,8 @@
 		5BE3ACCB26857F8800F9CE22 /* Generate Password */ = {
 			isa = PBXGroup;
 			children = (
-				5BE3ACD5268587E100F9CE22 /* GeneratePassword.swift */,
+				5B54B15C273ADAD90066B1CD /* Chain Password */,
+				5B54B15B273ADACC0066B1CD /* Regular Password */,
 			);
 			path = "Generate Password";
 			sourceTree = "<group>";
@@ -267,6 +288,7 @@
 				5B2A6599268A487800F25F8E /* QuickDecryption.swift */,
 				5BE629F626A5D2A3005AD6E0 /* SwipeController.swift */,
 				5BE629F926A5EABC005AD6E0 /* TOSController.swift */,
+				5BA09FAB2739BBA2000F6D8F /* ChainPasswordGenerator.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -459,6 +481,8 @@
 				5BE3ACD926863EDC00F9CE22 /* CoreDataSaving.swift in Sources */,
 				5BE3ACFB2687D5FF00F9CE22 /* SubsDecryption.swift in Sources */,
 				5BE3ACF92687D42400F9CE22 /* CaesDecryption.swift in Sources */,
+				5B54B15E273ADAE40066B1CD /* ChainGeneration.swift in Sources */,
+				5BA09FAC2739BBA2000F6D8F /* ChainPasswordGenerator.swift in Sources */,
 				5BE3ACED26869B4200F9CE22 /* SubstitutionEncryption.swift in Sources */,
 				5B87319A2688FE0900A75A3F /* Settings.swift in Sources */,
 				5B2A659A268A487800F25F8E /* QuickDecryption.swift in Sources */,
@@ -662,6 +686,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RW.owel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -682,6 +707,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RW.owel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

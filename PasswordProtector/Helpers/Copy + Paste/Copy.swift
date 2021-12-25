@@ -10,9 +10,15 @@ import UIKit
 
 class Copy
 {
-    static func copyText(_ str: String)
+    static func copyText(_ str: String) -> UIColor
     {
         UIPasteboard.general.string = str
-        print(UIPasteboard.general.string ?? "NOTHING COPIED")
+        print(UIPasteboard.general.string ?? "")
+        if UIPasteboard.general.string != nil || UIPasteboard.general.string == ""
+        {
+            return UIColor.green
+        }
+        
+        return UIColor.red
     }
 }

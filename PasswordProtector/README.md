@@ -59,3 +59,52 @@
 #### Version 1.1.5.2
 > - TOS added in main screen 
 > - TOS added in settings
+
+#
+
+##### Version 1.2.0.0
+> - Bug Fixes
+
+#### Version 1.2.0.1
+> - Fixed order arrangement of sections
+
+#### Version 1.2.0.2
+> - Fixed naming schemes to avoid confusion and cause clearity
+
+#### Version 1.2.0.3
+> - Added info buttons for help uses
+> - Settings cipher info
+> - Rules for every section info buttons
+
+#### Version 1.2.1.0
+> - Fixed Encryption & Decryption text bugs
+
+#### Version 1.2.1.1
+> - Fixed Substitution Encryption text bug
+
+#### Version 1.2.1.2
+> - Fixed Caesar Encryption text bug
+
+#### Version 1.2.1.3
+> - Fixed Substitution Decryption text bug
+
+#### Version 1.2.1.4
+> - Fixed Caesar Decryption text bug
+
+#### Version 1.2.1.0
+> - Password Generation Bugs
+
+#### Version 1.2.1.1
+> - Increase diversity of numbers/special TO letters
+
+#### Version 1.2.1.2
+> - Guarantee special character when selected
+> - Increased Diversity of lower & upper characters 
+
+#### Version 1.2.2
+> - Create chain password generator
+> - Options: number of chains, size of a chain, numbers included?
+> - Format: abcdef-12345-abd23-ads433 (etc)
+
+#### Version 1.2.3
+> - Added feedback on copy press to ensure action went through

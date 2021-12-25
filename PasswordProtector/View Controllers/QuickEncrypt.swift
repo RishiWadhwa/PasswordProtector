@@ -60,6 +60,8 @@ class QuickEncrypt: UIViewController
         
         newtext.text = "Encrypted Text:\n\(encryptedText)"
         cipherview.text = "Cipher:\n\(cipher.value(forKey: "cipher") as? String ?? "Error 001: No cipher found")"
+        newtext.textColor = .black
+        cipherview.textColor = .black
     }
     
     @IBAction func saveButtonClicked(_ sender: Any)
@@ -114,11 +116,11 @@ class QuickEncrypt: UIViewController
     
     @IBAction func copyEncryption(_ sender: Any)
     {
-        Copy.copyText(encrypted)
+        newtext.textColor = Copy.copyText(encrypted)
     }
     
     @IBAction func copyCipher(_ sender: Any)
     {
-        Copy.copyText(cipherString)
+        cipherview.textColor = Copy.copyText(cipherString)
     }
 }
